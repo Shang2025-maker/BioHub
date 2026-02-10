@@ -1,0 +1,25 @@
+{
+  "envId": "shang-8goyccjf880e83cb",
+  "region": "",
+  "version": "2.0",
+  "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+  "framework": {
+    "name": "biohub",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "outputPath": ".",
+          "cloudPath": "/",
+          "ignore": [
+            ".git",
+            ".github",
+            "node_modules",
+            "cloudbaserc.json",
+            ".agent"
+          ]
+        }
+      }
+    }
+  }
+}

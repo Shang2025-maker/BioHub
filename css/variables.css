@@ -1,0 +1,101 @@
+/* ===== Design Tokens ===== */
+:root {
+  /* Primary Colors */
+  --primary: #6C5CE7;
+  --primary-light: #a29bfe;
+  --primary-dark: #4a3db8;
+  --primary-glow: rgba(108, 92, 231, 0.4);
+
+  /* Accent Colors */
+  --accent: #00D2D3;
+  --accent-light: #55efc4;
+  --accent-dark: #00a8a8;
+  --accent-glow: rgba(0, 210, 211, 0.4);
+
+  /* Status Colors */
+  --success: #00b894;
+  --success-bg: rgba(0, 184, 148, 0.15);
+  --warning: #fdcb6e;
+  --warning-bg: rgba(253, 203, 110, 0.15);
+  --danger: #ff6b6b;
+  --danger-bg: rgba(255, 107, 107, 0.15);
+  --info: #74b9ff;
+  --info-bg: rgba(116, 185, 255, 0.15);
+
+  /* Background */
+  --bg-deepest: #060612;
+  --bg-deep: #0a0a1a;
+  --bg-dark: #0f0f23;
+  --bg-card: #16162a;
+  --bg-card-hover: #1e1e3a;
+  --bg-elevated: #1a1a35;
+  --bg-input: #12122a;
+
+  /* Text */
+  --text-primary: #eef0ff;
+  --text-secondary: #a0a3bd;
+  --text-tertiary: #6b6e8a;
+  --text-inverse: #0a0a1a;
+
+  /* Border */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --border-glow: rgba(108, 92, 231, 0.3);
+
+  /* Glass */
+  --glass-bg: rgba(22, 22, 42, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 20px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Typography */
+  --font-sans: 'Inter', 'Noto Sans SC', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px var(--primary-glow);
+  --shadow-accent-glow: 0 0 20px var(--accent-glow);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --sidebar-width-collapsed: 72px;
+  --header-height: 64px;
+  --content-max-width: 1400px;
+}
