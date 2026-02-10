@@ -1,6 +1,6 @@
 import { router } from './router.js';
 import { store } from './store.js';
-import { renderSidebar, closeSidebar } from './components/sidebar.js';
+import { renderSidebar } from './components/sidebar.js';
 import { renderHeader } from './components/header.js';
 import { renderLogin, hideLogin } from './pages/login.js';
 import { renderDashboard } from './pages/dashboard.js';
@@ -61,7 +61,10 @@ router
     .on('/admin/settings', page(renderAdminSettings));
 
 // Sidebar overlay click to close (mobile)
-document.getElementById('sidebar-overlay')?.addEventListener('click', closeSidebar);
+document.getElementById('sidebar-overlay')?.addEventListener('click', () => {
+    document.getElementById('sidebar')?.classList.remove('open');
+    document.getElementById('sidebar-overlay')?.classList.remove('visible');
+});
 
 // Start
 router.start();

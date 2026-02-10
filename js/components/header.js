@@ -1,5 +1,4 @@
 import { store } from '../store.js';
-import { toggleSidebar } from './sidebar.js';
 
 const pageNames = {
   '/': '仪表盘',
@@ -65,5 +64,8 @@ export function renderHeader() {
   `;
 
   // Hamburger menu toggle
-  el.querySelector('#sidebar-toggle')?.addEventListener('click', toggleSidebar);
+  el.querySelector('#sidebar-toggle')?.addEventListener('click', () => {
+    document.getElementById('sidebar')?.classList.toggle('open');
+    document.getElementById('sidebar-overlay')?.classList.toggle('visible');
+  });
 }
