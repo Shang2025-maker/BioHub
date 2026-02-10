@@ -2164,14 +2164,44 @@
     height: 16px;
 }
 
-/* -- Responsive -- */
-@media (max-width: 900px) {
-    .adm-grid-2 {
+/* ================================================================
+   RESPONSIVE — Pages & Admin
+   ================================================================ */
+
+/* ---- Tablet (max-width: 1024px) ---- */
+@media (max-width: 1024px) {
+
+    /* Simulation */
+    .sim-config-bar {
+        flex-wrap: wrap;
+    }
+
+    .sim-main-grid {
         grid-template-columns: 1fr;
     }
 
+    /* Subscription */
+    .sub-plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* History */
+    .hist-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reagents */
+    .reagent-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Admin */
     .adm-mini-stats {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adm-grid-2 {
+        grid-template-columns: 1fr;
     }
 
     .adm-config-grid {
@@ -2181,13 +2211,220 @@
     .adm-lab-info-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* ---- Mobile (max-width: 768px) ---- */
+@media (max-width: 768px) {
+    /* --- Front-end pages --- */
+
+    /* Tables: horizontal scroll wrapper */
+    .order-table,
+    .adm-user-table,
+    .adm-order-table,
+    .adm-log-table,
+    .adm-wd-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .order-table table,
+    .adm-user-table table,
+    .adm-order-table table,
+    .adm-log-table table,
+    .adm-wd-table table {
+        min-width: 640px;
+    }
+
+    /* Simulation */
+    .sim-config-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sim-config-bar select,
+    .sim-config-bar input {
+        width: 100% !important;
+    }
+
+    .sim-result-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Subscription */
+    .sub-compare-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sub-compare-table table {
+        min-width: 500px;
+    }
+
+    /* History */
+    .hist-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hist-filter-bar select,
+    .hist-filter-bar input {
+        width: 100% !important;
+    }
+
+    /* Analytics */
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Digital Twin */
+    .twin-controls {
+        flex-wrap: wrap;
+    }
+
+    /* Orders */
+    .order-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Reagents */
+    .reagent-search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .reagent-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Wet Lab */
+    .wetlab-steps {
+        flex-direction: column;
+    }
+
+    /* Messages */
+    .messages-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .conv-list {
+        width: 100%;
+        max-height: 260px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* Marketplace */
+    .market-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .labs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Admin pages --- */
+    .adm-page-header h2 {
+        font-size: var(--text-xl);
+    }
+
+    .adm-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .adm-filter-bar select,
+    .adm-filter-bar input {
+        width: 100% !important;
+    }
+
+    .adm-mini-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
 
     .adm-tabs {
         flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .adm-tab {
+        flex: 1;
+        min-width: 80px;
+        text-align: center;
+        font-size: 12px;
     }
 
     .adm-dispute-parties {
         flex-direction: column;
         gap: 4px;
+    }
+
+    .adm-fin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adm-setting-body {
+        grid-template-columns: 1fr;
+    }
+
+    .adm-ann-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- Small Phone (max-width: 480px) ---- */
+@media (max-width: 480px) {
+
+    /* Front-end */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: var(--space-md);
+    }
+
+    .charts-grid {
+        gap: 12px;
+    }
+
+    /* Simulation */
+    .sim-step-indicator {
+        gap: 4px;
+        font-size: 11px;
+    }
+
+    /* Admin */
+    .adm-mini-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .adm-fin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .adm-alert-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .adm-lab-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adm-tabs {
+        gap: 2px;
+    }
+
+    .adm-tab {
+        padding: 6px 8px;
+        font-size: 11px;
     }
 }

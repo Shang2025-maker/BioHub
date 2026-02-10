@@ -1,6 +1,17 @@
 import { store } from '../store.js';
 import { router } from '../router.js';
 
+// Centralized sidebar open/close for mobile
+export function closeSidebar() {
+  document.getElementById('sidebar')?.classList.remove('open');
+  document.getElementById('sidebar-overlay')?.classList.remove('visible');
+}
+
+export function toggleSidebar() {
+  document.getElementById('sidebar')?.classList.toggle('open');
+  document.getElementById('sidebar-overlay')?.classList.toggle('visible');
+}
+
 const icons = {
   dashboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
   lab: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v7l5 8H4l5-8V3z"/><path d="M8 3h8"/></svg>',
@@ -132,6 +143,8 @@ export function renderSidebar() {
   el.querySelectorAll('.sidebar-nav-item').forEach(a => {
     a.addEventListener('click', (e) => {
       e.preventDefault();
+      // Close sidebar BEFORE navigate (navigate triggers re-render)
+      closeSidebar();
       router.navigate(a.dataset.route);
     });
   });
@@ -151,6 +164,7 @@ export function renderSidebar() {
 
   // Back to frontend
   el.querySelector('#switch-to-front')?.addEventListener('click', () => {
+    closeSidebar();
     store.set('currentRole', 'requester');
     router.navigate('/');
   });

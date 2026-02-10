@@ -327,3 +327,21 @@
 .login-demo:hover {
     background: rgba(0, 210, 211, 0.15);
 }
+
+/* ===== Login Responsive ===== */
+@media (max-width: 480px) {
+    .login-card {
+        margin: var(--space-md);
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .login-brand h1 {
+        font-size: var(--text-xl);
+    }
+
+    .login-orb-1,
+    .login-orb-2 {
+        width: 200px;
+        height: 200px;
+    }
+}
